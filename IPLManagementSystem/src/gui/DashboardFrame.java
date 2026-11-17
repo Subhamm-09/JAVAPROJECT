@@ -40,6 +40,7 @@ public class DashboardFrame extends JFrame {
     private static final String PANEL_SCORES   = "SCORES";
     private static final String PANEL_POINTS   = "POINTS";
     private static final String PANEL_STATS    = "STATS";
+    private static final String PANEL_AUCTION  = "AUCTION";
 
     public DashboardFrame(Admin admin) {
         this.currentAdmin = admin;
@@ -71,6 +72,7 @@ public class DashboardFrame extends JFrame {
         contentPanel.add(new ScorePanel(), PANEL_SCORES);
         contentPanel.add(new PointsTablePanel(), PANEL_POINTS);
         contentPanel.add(new PlayerStatsPanel(), PANEL_STATS);
+        contentPanel.add(new AuctionPanel(), PANEL_AUCTION);
 
         add(contentPanel, BorderLayout.CENTER);
 
@@ -136,7 +138,8 @@ public class DashboardFrame extends JFrame {
             {"🏟️ Matches",    PANEL_MATCHES},
             {"📊 Scores",      PANEL_SCORES},
             {"📋 Points Table",PANEL_POINTS},
-            {"📈 Statistics",  PANEL_STATS}
+            {"📈 Statistics",  PANEL_STATS},
+            {"🔨 Auction",     PANEL_AUCTION}
         };
 
         for (String[] item : navItems) {

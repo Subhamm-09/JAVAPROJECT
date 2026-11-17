@@ -22,4 +22,3 @@ if %ERRORLEVEL% EQU 0 (
     echo [ERROR] Compilation failed. Please check errors above.
     echo ============================================================
 )
-pause
